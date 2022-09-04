@@ -1,0 +1,180 @@
+  body {
+    background-color: rgb(251, 61, 140);
+  }
+
+  #cocktail-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+  }
+
+  #cocktail {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #search {
+    margin-bottom: 20px;
+  }
+
+  #cocktail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(251, 61, 140); 
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  #cocktail-recipes {
+    background:  rgb(248, 117, 172); 
+    z-index: 1;
+    padding: 1%;
+  }
+ 
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+
+  li, p {
+    font-family: Segoe Print;
+    color:rgba(36, 35, 35, 0.993)
+    padding: 10px;
+    margin: 5px;
+  }
+
+  p {
+    margin-left: 2.5%;
+  }
+
+
+  h1 {
+    text-align: center;
+    font-size: 2.75em;
+    font-weight: bold;
+    color: #fff;
+    font-family: Segoe Print;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: Segoe Print;
+    color: #fff; 
+  }
+
+  .btn {
+    width: 110px; height: 50px;
+    outline: 0;
+    border: 2px solid #ccc;
+    color: #000;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 0px 1.5px 15px rgba(0, 0, 0, 0.05);
+    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+}
+
+.btn:hover {
+    box-shadow: 0px 1.5px 15px rgba(240, 41, 161);
+    border-color: rgb(240, 41, 161);
+}
+
+.btn-like {
+    padding: 1rem 1rem 1rem 4rem;
+    font-size: .9rem;
+    border-radius: 8px;
+    background: #fff;
+    transition: 1.5s cubic-bezier(.21,.04,.26,.99);
+}
+
+.btn-like.liked {
+    background: #fff;
+    border-color: rgb(240, 41, 161);
+}
+
+.btn-icon {
+    display: inline-block;
+    color: white;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    left: 1rem;
+    transition: 1s cubic-bezier(.21,.04,.26,.99);
+    transform: rotate(0deg)
+}
+
+.btn:hover .btn-icon {
+    color: #000;
+}
+
+.btn.liked:hover .btn-icon {
+    color: rgb(240, 41, 161);
+}
+
+.liked .btn--icon-default {
+    transform: rotate(-90deg)
+}
+
+.btn:not(.liked).btn--icon-liked {
+    transform: rotate(-90deg)
+}
+
+.liked .btn--icon-default,
+.btn--icon-liked {
+    opacity: 0;
+    color: rgb(240, 41, 161);
+    position: absolute;
+}
+
+.btn--icon-default,
+.liked .btn--icon-liked {
+    opacity: 1;
+    left: 1rem;
+}
+
+.btn-content {
+    transition: transform 0.1s ease;
+    display: inline-block;
+   
+}
+
+.liked .btn-content {
+    color: rgb(240, 41, 161);
+}
+
+.btn:hover.liked .btn-content {
+    color: rgb(240, 41, 161);
+}
+
+.btn:not(.liked) .btn-content--liked {
+    transform: translate(110px)
+}
+
+.btn:not(.liked) .btn-content--default {
+    transform: translate(-56px)
+}
+
+.liked .btn-content--default {
+    transform: translate(24px)
+}
+
+@media all and (max-width:650px){
+
+  #cocktail-container {
+  flex-direction: column;
+  }
+  
+  #cocktail-recipe {
+  flex: 100%;
+  margin: 10px;
+  border: 1px solid #0f0f0f;
+  }
+  
+  img {
+  height: 100%;
+  }
+  }
